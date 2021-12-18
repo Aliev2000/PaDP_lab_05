@@ -29,6 +29,7 @@ import static org.asynchttpclient.Dsl.asyncHttpClient;
 public class App {
     public static final String HOST = "localhost";
     public static final int PORT = 8080;
+    public static final int OK_CODE = 200;
     public static final String WELCOME_MSG = "Server starting...";
     public static final String PING_MSG_FORMAT = "url: %s ping: %d";
     public static ActorRef cache;
