@@ -37,6 +37,8 @@ public class App {
         Query query = request.getUri().query();
 
 
+    }
+
     private static CompletionStage<Object> asy(Pair<String, Integer> pair) {
         return Patterns.ask(cache, pair, Duration.ofMillis(5000)).thenCompose(
                 result -> {
