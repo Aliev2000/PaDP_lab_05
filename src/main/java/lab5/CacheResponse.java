@@ -4,6 +4,8 @@ public final class CacheResponse {
     private final String url;
     private final Long time;
 
+    public String getUrl() {
+
     public Long getTime() {
         return time;
     }
