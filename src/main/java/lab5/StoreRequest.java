@@ -12,4 +12,6 @@ public final class StoreRequest {
     }
 
     public long getTime() {
+        return time;
+    }
 }
