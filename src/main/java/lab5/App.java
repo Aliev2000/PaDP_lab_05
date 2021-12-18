@@ -32,6 +32,29 @@ public class App {
 
 
     private static CompletionStage<Object> asy(Pair<String, Integer> pair) {
+        return Patterns.ask(cache, pair, Duration.ofMillis(5000)).thenCompose(
+                result -> {
+                    long responseTime = ((CacheResponse) result).getTime();
+                    if (responseTime > 0) {
+                        return CompletableFuture.completedFuture(new Pair<>(pair.first(), responseTime));
+                    }
+                    return Source.from(Collections.singletonList(pair))
+                            .toMat(
+                                    testSink(),
+                                    Keep.right()
+                            )
+                            .run(materializer)
+                            .thenCompose(sum ->
+                                CompletableFuture.completedFuture(
+                                            new Pair<>(
+                                                    pair.first(),
+                                                    sum/pair.second()
+                                            )
+                                )
+                            );
+                });
+    }
+
 
     public static void main(String[] args) {
         System.out.println(WELCOME_MSG);
