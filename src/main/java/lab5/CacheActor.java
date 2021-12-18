@@ -11,6 +11,11 @@ public class CacheActor extends AbstractActor{
 
     @Override
     public Receive createReceive() {
+        return ReceiveBuilder.create()
+                .match(Pair.class, this::findInCache)
+                .match(StoreRequest.class, this::storeToCache)
+                .build();
+    }
 
     private void storeToCache(StoreRequest request) {
         data.put(request.getUrl(), request.getTime());
