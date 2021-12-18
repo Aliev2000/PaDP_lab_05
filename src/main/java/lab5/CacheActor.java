@@ -7,3 +7,5 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class CacheActor extends AbstractActor{
+    private void storeToCache(StoreRequest request) {
+
