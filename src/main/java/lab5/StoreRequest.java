@@ -7,3 +7,5 @@ public final class StoreRequest {
         this.time = time;
     }
 
+    public String getUrl() {
+
