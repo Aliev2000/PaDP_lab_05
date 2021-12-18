@@ -8,4 +8,6 @@ import java.util.Map;
 
 public class CacheActor extends AbstractActor{
     private void storeToCache(StoreRequest request) {
+        data.put(request.getUrl(), request.getTime());
+    }
 
