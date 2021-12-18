@@ -7,6 +7,8 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class CacheActor extends AbstractActor{
+    private final Map<String, Long> data = new HashMap<>();
+
     private void storeToCache(StoreRequest request) {
         data.put(request.getUrl(), request.getTime());
     }
