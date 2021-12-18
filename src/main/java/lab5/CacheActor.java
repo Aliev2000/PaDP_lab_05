@@ -11,6 +11,8 @@ public class CacheActor extends AbstractActor{
         data.put(request.getUrl(), request.getTime());
     }
 
+    private void findInCache(Pair<String, Integer> request) {
+        );
     }
 
 }
