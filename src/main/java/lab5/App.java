@@ -32,6 +32,8 @@ public class App {
     public static final String DEFAULT_URL = "https://www.google.ru/";
 
 
+    public static Pair<String, Integer> makePair(HttpRequest request) {
+
     private static CompletionStage<Object> asy(Pair<String, Integer> pair) {
         return Patterns.ask(cache, pair, Duration.ofMillis(5000)).thenCompose(
                 result -> {
