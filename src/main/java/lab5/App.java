@@ -33,6 +33,8 @@ public class App {
 
 
     public static Pair<String, Integer> makePair(HttpRequest request) {
+        Query query = request.getUri().query();
+
 
     private static CompletionStage<Object> asy(Pair<String, Integer> pair) {
         return Patterns.ask(cache, pair, Duration.ofMillis(5000)).thenCompose(
