@@ -31,3 +31,5 @@ public class App {
     public static final String DEFAULT_URL = "https://www.google.ru/";
 
 
+    public static void main(String[] args) {
+
