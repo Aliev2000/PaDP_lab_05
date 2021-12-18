@@ -9,6 +9,7 @@ import java.util.Map;
 public class CacheActor extends AbstractActor{
     private final Map<String, Long> data = new HashMap<>();
 
+    @Override
     private void storeToCache(StoreRequest request) {
         data.put(request.getUrl(), request.getTime());
     }
