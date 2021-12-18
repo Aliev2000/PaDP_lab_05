@@ -27,3 +27,5 @@ import java.util.concurrent.CompletionStage;
 import static org.asynchttpclient.Dsl.asyncHttpClient;
 
 public class App {
+    public static final String DEFAULT_URL = "https://www.google.ru/";
+
