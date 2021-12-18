@@ -10,6 +10,8 @@ public class CacheActor extends AbstractActor{
     private final Map<String, Long> data = new HashMap<>();
 
     @Override
+    public Receive createReceive() {
+
     private void storeToCache(StoreRequest request) {
         data.put(request.getUrl(), request.getTime());
     }
