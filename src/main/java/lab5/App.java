@@ -31,6 +31,8 @@ public class App {
     public static final String DEFAULT_URL = "https://www.google.ru/";
 
 
+    private static CompletionStage<Object> asy(Pair<String, Integer> pair) {
+
     public static void main(String[] args) {
         System.out.println(WELCOME_MSG);
 
