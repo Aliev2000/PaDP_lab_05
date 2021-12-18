@@ -8,4 +8,6 @@ public final class StoreRequest {
     }
 
     public String getUrl() {
+        return url;
+    }
 
