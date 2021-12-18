@@ -11,3 +11,5 @@ public final class StoreRequest {
         return url;
     }
 
+    public long getTime() {
+}
