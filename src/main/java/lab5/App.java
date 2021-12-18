@@ -29,6 +29,7 @@ import static org.asynchttpclient.Dsl.asyncHttpClient;
 public class App {
     public static final String HOST = "localhost";
     public static ActorRef cache;
+    public static ActorMaterializer materializer;
     public static final String DEFAULT_URL = "https://www.google.ru/";
 
 
